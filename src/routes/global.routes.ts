@@ -1,9 +1,12 @@
-import { Response, Router } from "express";
+import { Request, Response, Router } from "express";
+import { join } from "path";
+import { cwd } from "process";
 
 const routes = Router()
+const clientRoute = join(cwd(), "public", "index.html")
 
-routes.get("/", (_req, res: Response) => {
-    res.status(200).send("Express + TypeScript + Prisma")
+routes.get("/", (_req: Request, res: Response) => {
+    res.sendFile(clientRoute);
 })
 
 export default routes;

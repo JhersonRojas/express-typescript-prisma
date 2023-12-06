@@ -14,6 +14,7 @@ const app = express()
 
 app.use(body.json())
 app.use(body.urlencoded({ extended: false }))
+app.use(express.static("public"));
 
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"))
