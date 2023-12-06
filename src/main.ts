@@ -1,21 +1,13 @@
-import { config } from 'dotenv'
-import express, { Express, Request, Response } from 'express'
+import app from "./libs/modules.config";
 
-config()
+const SERVER_PORT = process.env.PORT;
 
 async function Main() {
     try {
 
-        const app: Express = express()
-        const port = process.env.PORT
+        app.listen(SERVER_PORT)
 
-        app.get('/', (req: Request, res: Response) => {
-            res.send('Express + TypeScript + Prisma')
-        })
-
-        app.listen(port)
-
-        console.log(`⚡️ { servidor }: Server is running at http://localhost:${port}`)
+        console.log(`⚡️ { servidor }: Server is running at http://localhost:${SERVER_PORT}`)
 
     } catch (error) {
         console.error({
