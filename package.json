@@ -1,7 +1,7 @@
 {
-  "name": "prisma-app-simple",
-  "version": "0.0.2",
-  "description": "Proyecto con Prisma ORM sencillo",
+  "name": "express-typescript-prisma",
+  "version": "0.0.3",
+  "description": "Proyecto con express, typescript y prisma ORM sencillo",
   "license": "ISC",
   "author": {
     "name": "JhersonRojas",
