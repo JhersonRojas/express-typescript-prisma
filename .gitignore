@@ -1,0 +1,9 @@
+# Modules
+/node_modules
+
+# Production
+/dist
+
+# env's
+.env
+.env.local*
