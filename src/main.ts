@@ -5,6 +5,7 @@ const SERVER_PORT = process.env.PORT;
 async function Main() {
     try {
 
+        console.log(process.env.NODE_ENV)
         app.listen(SERVER_PORT)
 
         console.log(`⚡️ { servidor }: Server is running at http://localhost:${SERVER_PORT}`)

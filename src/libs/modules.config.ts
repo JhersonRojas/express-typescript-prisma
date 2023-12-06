@@ -6,6 +6,7 @@ import { config } from "dotenv";
 
 // Routes
 import globalRoutes from "../routes/global.routes";
+import usersRoutes from "../routes/users.routes";
 
 config()
 
@@ -14,14 +15,15 @@ const app = express()
 app.use(body.json())
 app.use(body.urlencoded({ extended: false }))
 
-if (process.env.NODE_ENV === "dev") {
+if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"))
 }
 
-if (process.env.NODE_ENV === "prod") {
+if (process.env.NODE_ENV === "production") {
     app.use(morgan("common", { skip: (_req, res) => res.statusCode < 400 }))
 }
 
 app.use(globalRoutes)
+app.use(usersRoutes)
 
 export default app;
