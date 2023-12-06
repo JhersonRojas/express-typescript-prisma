@@ -39,6 +39,16 @@
       text-align: center;
     }
 
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    a:hover {
+      transform: scale(1.1);
+      animation: 0.3s ease-in-out;
+    }
+
     img {
       width: 6rem;
       margin-bottom: 1rem;
@@ -63,30 +73,36 @@
   </style>
   <main>
     <article>
-      <section>
-        <figure>
-          <img src="./assets/express.svg" alt="express js">
-        </figure>
-        <p>
-          Express.js
-        </p>
-      </section>
-      <section>
-        <figure>
-          <img src="./assets/typescript.svg" alt="typescript">
-        </figure>
-        <p>
-          TypeScript
-        </p>
-      </section>
-      <section>
-        <figure>
-          <img src="./assets/prisma.svg" alt="prisma orm">
-        </figure>
-        <p>
-          Prisma ORM
-        </p>
-      </section>
+      <a href="https://expressjs.com">
+        <section>
+          <figure>
+            <img src="./assets/express.svg" alt="express js">
+          </figure>
+          <p>
+            Express.js
+          </p>
+        </section>
+      </a>
+      <a href="https://www.typescriptlang.org/">
+        <section>
+          <figure>
+            <img src="./assets/typescript.svg" alt="typescript">
+          </figure>
+          <p>
+            TypeScript
+          </p>
+        </section>
+      </a>
+      <a href="https://www.prisma.io/">
+        <section>
+          <figure>
+            <img src="./assets/prisma.svg" alt="prisma orm">
+          </figure>
+          <p>
+            Prisma ORM
+          </p>
+        </section>
+      </a>
     </article>
   </main>
 </body>

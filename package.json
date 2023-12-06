@@ -1,6 +1,6 @@
 {
   "name": "express-typescript-prisma",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Proyecto con express, typescript y prisma ORM sencillo",
   "license": "ISC",
   "author": {

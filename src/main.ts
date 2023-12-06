@@ -1,19 +1,24 @@
-import app from "./libs/modules.config";
-
-const SERVER_PORT = process.env.PORT;
+// libs
+import { app, READY_MESSAGE, SERVER_MODE, SERVER_PORT } from "./libs/modules.config";
+import loggers from "./libs/tools/loggers";
 
 async function Main() {
     try {
 
-        console.log(process.env.NODE_ENV)
-        app.listen(SERVER_PORT)
+        if (!SERVER_PORT)
+            throw new Error("No se ha obtenido el puerto del servidor")
 
-        console.log(`⚡️ { servidor }: Server is running at http://localhost:${SERVER_PORT}`)
+        if (!SERVER_MODE)
+            throw new Error("No se ha obtenido el modo del servidor")
+
+        app.listen(SERVER_PORT, () => {
+            console.log(READY_MESSAGE)
+        })
 
     } catch (error) {
-        console.error({
-            error: "No se ha iniciado el servidor",
-            details: error
+        loggers.errors({
+            msg: "No se ha iniciado el servidor",
+            error
         })
     }
 }
