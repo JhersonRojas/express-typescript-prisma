@@ -30,3 +30,12 @@ npm run build
 ```shell
 npm start
 ```
+
+## Tabla de ejemplo para el proyecto
+
+| Users |        |              |
+| ----- | ------ | ------------ |
+| id    | String | @id @db.Uuid |
+| email | String | @unique      |
+| name  | String |              |
+| phone | Int?   | @db.Integer  |

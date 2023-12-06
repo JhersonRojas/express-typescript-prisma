@@ -11,8 +11,8 @@ datasource db {
 }
 
 model Users {
-  id    Int    @id @default(autoincrement())
+  id    String @id @db.Uuid
   email String @unique
   name  String
-  phone Int?   @db.SmallInt
+  phone Int?   @db.Integer
 }

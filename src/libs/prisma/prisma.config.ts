@@ -11,6 +11,6 @@ if (process.env.NODE_ENV !== "production") global.prisma = prisma
 // Estanciamiento de modelos a client de Prisma
 export const Users = prisma.users
 
-export async function ModelDisconnet() {
+export async function ModelDisconnect() {
     await prisma.$disconnect()
 }
